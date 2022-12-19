@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { matrix } from "../data";
-import { search } from "../utils/search";
+import { Search } from "../utils/Search";
 import { generateRandomLetterArray } from "../utils/generateRandomLetterArray";
 import { Board } from "./Board";
 import { SearchBar } from "./SearchBar";
@@ -16,7 +16,7 @@ const WordPuzzle = () => {
   let searchWordInput = searchWord.toUpperCase();
 
   const handleSearch = () => {
-    const wordSearchResult = search(searchWordInput, newMatrix || matrix);
+    const wordSearchResult = Search(searchWordInput, newMatrix || matrix);
     setResult(wordSearchResult.result);
     setX(wordSearchResult.x);
     setY(wordSearchResult.y);

@@ -1,4 +1,4 @@
-export const search = (searchWordInput, matrix) => {
+export const Search = (searchWordInput, matrix) => {
   let searchResult = {
       result: false,
       x: null,
