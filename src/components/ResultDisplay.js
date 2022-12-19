@@ -1,5 +1,3 @@
-//Create a ResultDisplay Component
-
 export const ResultDisplay = (props) => {
   const { result, x, y } = props;
   return (
@@ -7,7 +5,7 @@ export const ResultDisplay = (props) => {
       <div className="resultDisplay">
         {result !== null && (
           <p>
-            {result ? `Word found at position (${x}, ${y})` : "Word not found"}
+            {result ? `Word found at position() (${x}, ${y}) ` : "Word not found"}
           </p>
         )}
       </div>

@@ -1,6 +1,5 @@
 export const SearchBar = (props) => {
   const { handleSearch, handleInput, searchWord } = props;
-
   return (
     <>
       <div className="searchBar">

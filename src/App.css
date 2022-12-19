@@ -35,45 +35,24 @@
 }
 
 
-
-.wordBoard{
+/* .wordBoard{
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  /* display: grid;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  width: 100%;
-  height: 100%; */
-}
+} */
 
 .letter{
   background-color: lightgray;
   color: black;
   border: 1px solid black;
+  border-radius: 15px;
   font-size: 24px;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   text-align: center;
 }
 
-/* header {
-  background-color: lightblue;
-  padding: 20px;
-  text-align: center;
-} */
-
 footer {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  width: 100%;
-  height: 5vh; */
   position: fixed;
   left: 0;
   bottom: 0;
@@ -117,7 +96,6 @@ footer {
 
 .search-form input[type="text"] {
   width: 100%;
-
   font-size: 16px;
   border: 1px solid gray;
 }
@@ -137,3 +115,15 @@ footer {
 
 
 
+.reset-button {
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background-color: darkred;
+}
