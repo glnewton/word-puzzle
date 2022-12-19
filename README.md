@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Word Puzzle
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About
 
-## Available Scripts
+A word puzzle game similar to Boggle or Scrabble.
 
-In the project directory, you can run:
+[GitHub Repository](https://github.com/glnewton/word-puzzle)
 
-### `npm start`
+[Live Site](https://word-puzzle-demo.onrender.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Requrirements](./docs/Summary.txt)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Sample](./docs/sampleMatrix.jpg)
 
-### `npm test`
+## Screenshots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Desktop View Screenshot 1](./docs/desktopView.jpg)
 
-### `npm run build`
+![Mobile View Screenshot 1](./docs/mobileView.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Build Status
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Project is a statically deployed via Render and is connected to the GitHub Repository to redploy on new commits/pushes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Code Style
 
-### `npm run eject`
+Elements of both functional programming and object-oriented programming are used in this project.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies, Language Features & Libraries Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- HTML/CSS
+- JavaScript
+- React
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Features
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Built with Create-React-App
+2. Hosted on Render
+3. Responsive mobile design 
 
-## Learn More
+## Installation Instructions
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Step 1: Clone (or fork) the repository**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Run the following code in your terminal to download the code:
 
-### Code Splitting
+`git clone https://github.com/glnewton/word-puzzle.git`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Installation Screenshot 1](./docs/installation1.jpg)
 
-### Analyzing the Bundle Size
+**Step 2: Run NPM Install to install necessary packages**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Installation Screenshot 2](./docs/installation2.jpg)
 
-### Making a Progressive Web App
+**Step 3: Run NPM Start to locally run the start scripts fo CRA (Create-React-App)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![Installation Screenshot 3](./docs/installation3.jpg)
 
-### Advanced Configuration
+![Installation Screenshot 4](./docs/installation4.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Game Mechanics:
 
-### Deployment
+1. Type word into search to search horizontally, reverse horizontally, vertically, or diagonally.
+2. Click 'Reset Board' button to create a new word board.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Known Issues:
 
-### `npm run build` fails to minify
+- Edge case that errors exist on some diagonal searches for partial words (matrix out of bounds error?).
+- I give the position of the start of the word, but is the position of the matrix and submatrix (X is the sub matrix (row) and starts from zero in the upper left hand corner. Y is the position in the row starting at zero from the left.)
+- I do not yet cite the end position of the word
+- Clicking Reset Board generates a random array and it can be searched ONCE. It then defaults back to the given array imported via the data.js file
+PARROT is not found in the array. I believe it was a translation error as LORO is found and is the masculine translation of PARROT.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Hypothetical Roadmap
+
+- Fix Reset Board so that the matrix data does not revert after one search.
+- Create highlight feature that finds the one and highlights the individual letters in yellow.
+- Create introductory modal with instructions and start button
+- Create tests
+
+## Acknowledgements
+
+- Jeff & Richard for some Q&A and mini demos.
+
+## Disclaimer
+
+I am not affliated with any of the above and all work used is for educational and demonstration purposes only. No profit is generated from this project.
+
+## Resources
+
+- General Google Fu
+
+## License
+
+MIT License
+
+MIT © [Gary Newton]()

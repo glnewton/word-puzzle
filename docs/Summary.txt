@@ -1,0 +1,19 @@
+Programming Exam.
+
+Instructions:
+Write a program in the technology of the position you postulated to solve a Word Puzzle in which given a matrix of N rows x M columns that contains alphabetic characters, a word can be searched as it is done in the traditional game. The word can be found horizontal and vertically and on any of the diagonals of the matrix.
+The program must:
+a) Read the search word.
+b) Read the matrix with all the characters it contains.
+c) Draw the graphical interface which is the matrix, the result and the location (x,y) in the matrix where the word begins. The graphical interface must also be developed in the same technology you are doing the program. 
+d) It must be a general program that works to find any word in any alphabet soup or in a previously determined alphabet soup (your decision).
+ 
+
+
+
+
+
+
+In the example above, you can see that DRAGON, CASA, CAMA and PARROT are words that the program should find. The program must indicate the starting and ending position of the word in the array.
+Please, send your solution to the email indicated by the recruiter.
+We wish you the very best of luck.
