@@ -46,6 +46,7 @@ export const Search = (searchWordInput, matrix) => {
       }
     }
   }
+
   // Vertical Search
   for (let i = 0; i < matrix.length; i++) {
     for (let j = 0; j < matrix[i].length; j++) {
@@ -66,7 +67,30 @@ export const Search = (searchWordInput, matrix) => {
       }
     }
   }
-  // Diagonal Search Top Left to Bottom Right
+
+
+// Reverse Vertical Search
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] === searchWordInput[0] && i - searchWordLength + 1 >= 0) {
+        let found = true;
+        for (let k = searchWordLength - 1; k >= 0; k--) {
+          if (matrix[i - k][j] !== searchWordInput[k]) {
+            found = false;
+            break;
+          }
+        }
+        if (found) {
+          searchResult.result = true;
+          searchResult.x = i;
+          searchResult.y = j;
+          return searchResult;
+        }
+      }
+    }
+  }
+
+// Diagonal Search Top Left to Bottom Right
   for (let i = 0; i < matrix.length; i++) {
     for (let j = 0; j < matrix[i].length; j++) {
       if (matrix[i][j] === searchWordInput[0] && i + searchWordLength <= matrix.length && i + searchWordLength >= 0 && j + searchWordLength <= matrix[i].length) {
@@ -86,7 +110,32 @@ export const Search = (searchWordInput, matrix) => {
       }
     }
   }
-  // Diagonal Search Top Right to Bottom Left
+
+  // Reverse Diagonal Search Top Left to Bottom Right
+  
+  for (let i = matrix.length - 1; i >= 0; i--) {
+    for (let j = matrix[i].length - 1; j >= 0; j--) {
+      if (matrix[i][j] === searchWordInput[0] && i - searchWordLength + 1 >= 0 && j - searchWordLength + 1 >= 0) {
+        let found = true;
+        for (let k = searchWordLength - 1; k >= 0; k--) {
+          if (matrix[i - k][j - k] !== searchWordInput[k]) {
+            found = false;
+            break;
+          }
+        }
+        if (found) {
+          searchResult.result = true;
+          searchResult.x = i;
+          searchResult.y = j;
+          return searchResult;
+        }
+      }
+    }
+  }
+
+
+
+// Diagonal Search Top Right to Bottom Left
   for (let i = 0; i < matrix.length; i++) {
     for (let j = matrix[i].length - 1; j >= 0; j--) {
       if (matrix[i][j] === searchWordInput[0] && i + searchWordLength <= matrix.length && i + searchWordLength >= 0 && j - searchWordLength >= 0) {
@@ -106,7 +155,30 @@ export const Search = (searchWordInput, matrix) => {
       }
     }
   }
-  // Diagonal Search Bottom Left to Top Right
+
+   // Reverse Diagonal Search Bottom Top Right to Bottom Left
+   for (let i = matrix.length - 1; i >= 0; i--) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] === searchWordInput[0] && i - searchWordLength + 1 >= 0 && j + searchWordLength <= matrix[i].length) {
+        let found = true;
+        for (let k = searchWordLength - 1; k >= 0; k--) {
+          if (matrix[i - k][j + k] !== searchWordInput[k]) {
+            found = false;
+            break;
+          }
+        }
+        if (found) {
+          searchResult.result = true;
+          searchResult.x = i;
+          searchResult.y = j;
+          return searchResult;
+        }
+      }
+    }
+  }
+
+
+// Diagonal Search Bottom Left to Top Right
   for (let i = matrix.length - 1; i >= 0; i--) {
     for (let j = 0; j < matrix[i].length; j++) {
       if (matrix[i][j] === searchWordInput[0] && i - searchWordLength >= 0 && i - searchWordLength < matrix.length && j + searchWordLength <= matrix[i].length) {
@@ -126,7 +198,32 @@ export const Search = (searchWordInput, matrix) => {
       }
     }
   }
-  // Diagonal Search Bottom Right to Top Left
+
+
+
+// Diagonal Search Bottom Left to Top Right (reverse)
+for (let i = matrix.length - 1; i >= 0; i--) {
+  for (let j = 0; j < matrix[i].length; j++) {
+    if (matrix[i][j] === searchWordInput[0] && i - searchWordLength + 1 >= 0 && j + searchWordLength <= matrix[i].length) {
+      let found = true;
+      for (let k = searchWordLength - 1; k >= 0; k--) {
+        if (matrix[i - k][j + k] !== searchWordInput[k]) {
+          found = false;
+          break;
+        }
+      }
+      if (found) {
+        searchResult.result = true;
+        searchResult.x = i;
+        searchResult.y = j;
+        break;
+      }
+    }
+  }
+}
+
+
+// Diagonal Search Bottom Right to Top Left
   for (let i = matrix.length - 1; i >= 0; i--) {
     for (let j = matrix[i].length - 1; j >= 0; j--) {
       if (matrix[i][j] === searchWordInput[0] && i - searchWordLength >= 0 && i - searchWordLength < matrix.length && j - searchWordLength >= 0) {
@@ -146,5 +243,28 @@ export const Search = (searchWordInput, matrix) => {
       }
     }
   }
+
+// Diagonal Search Bottom right to top left (reverse)
+  for (let i = matrix.length - 1; i >= 0; i--) {
+    for (let j = matrix[i].length - 1; j >= 0; j--) {
+      if (matrix[i][j] === searchWordInput[0] && i - searchWordLength + 1 >= 0 && j - searchWordLength + 1 >= 0) {
+        let found = true;
+        for (let k = searchWordLength - 1; k >= 0; k--) {
+          if (matrix[i - k][j - k] !== searchWordInput[k]) {
+            found = false;
+            break;
+          }
+        }
+        if (found) {
+          searchResult.result = true;
+          searchResult.x = i;
+          searchResult.y = j;
+          break;
+        }
+      }
+    }
+  }
+  
+
   return searchResult;
 };

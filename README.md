@@ -8,7 +8,7 @@ A word puzzle game similar to Boggle or Scrabble.
 
 [Live Site](https://word-puzzle-demo.onrender.com/)
 
-[Requrirements](./docs/Summary.txt)
+[Requirements](./docs/Summary.txt)
 
 ![Sample](./docs/sampleMatrix.jpg)
 
